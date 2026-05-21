@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-next-app@latest . --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(npx --yes create-next-app@latest . --name hr-demo --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(npx --yes create-next-app@latest --help)",
+      "Bash(npx --yes create-next-app@latest hr-demo --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(rm -rf hr-demo && ls -la)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --src-dir --no-eslint --no-turbopack --import-alias \"@/*\" --use-npm --yes)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Kevin_Chen\\Desktop\\HR-demo\\hr-demo"
+    ]
+  }
+}

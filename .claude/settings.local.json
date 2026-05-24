@@ -11,7 +11,9 @@
       "Bash(npm run *)",
       "Bash(mv c:/Users/Kevin_Chen/Desktop/hr-demo-app/src/lib/mock-date.ts c:/Users/Kevin_Chen/Desktop/hr-demo-app/src/lib/mock-data.ts)",
       "Bash(npx tsc *)",
-      "Bash(npx tsx *)"
+      "Bash(npx tsx *)",
+      "Bash(npx prettier *)",
+      "Bash(code --list-extensions)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Kevin_Chen\\Desktop\\HR-demo\\hr-demo",

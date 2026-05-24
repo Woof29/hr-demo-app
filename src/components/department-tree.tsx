@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { SidebarMenuItem, SidebarMenuButton, SidebarMenuSub, SidebarMenuAction } from '@/components/ui/sidebar';
+import { SidebarMenuItem, SidebarMenuButton, SidebarMenuSub } from '@/components/ui/sidebar';
 import type { DepartmentNode } from '@/lib/department-utils';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { ChevronRight } from 'lucide-react';
@@ -43,17 +43,16 @@ function DepartmentTreeNode({ node }: { node: DepartmentNode }) {
         return (
             <Collapsible defaultOpen className="group/collapsible">
                 <SidebarMenuItem>
-                    <CollapsibleTrigger asChild>
-                        <SidebarMenuButton className="p-1 hover:bg-sidebar-accent rounded data-[state=open]:[&_svg]:rotate-90">
+                    <div className="flex items-center w-full">
+                        <CollapsibleTrigger className="flex items-center justify-center p-1 rounded hover:bg-sidebar-accent shrink-0 data-[state=open]:[&_svg]:rotate-90">
                             <ChevronRight className="transition-transform" />
-                            <span>{node.name}</span>
+                        </CollapsibleTrigger>
+                        <SidebarMenuButton asChild className="flex-1">
+                            <Link href={`/employees?dept=${node.id}`}>
+                                <span>{node.name}</span>
+                            </Link>
                         </SidebarMenuButton>
-                    </CollapsibleTrigger>
-                    <SidebarMenuAction asChild>
-                        <Link href={`/employees?dept=${node.id}`}>
-                            <span className="sr-only">查看 {node.name} 員工</span>
-                        </Link>
-                    </SidebarMenuAction>
+                    </div>
 
                     {/* 遞迴渲染 children */}
                     <CollapsibleContent>

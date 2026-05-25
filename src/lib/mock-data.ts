@@ -29,8 +29,7 @@ export const employees: Employee[] = [
         departmentId: 6,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2020-03-15',
-        location: '台北'
+        hireDate: '2020-03-15'
     },
     {
         id: 2,
@@ -42,8 +41,7 @@ export const employees: Employee[] = [
         departmentId: 6,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-07-01',
-        location: '台北'
+        hireDate: '2023-07-01'
     },
     {
         id: 3,
@@ -55,8 +53,7 @@ export const employees: Employee[] = [
         departmentId: 6,
         employmentType: 'full-time',
         status: 'inactive',
-        hireDate: '2022-05-20',
-        location: '新竹'
+        hireDate: '2022-05-20'
     },
     {
         id: 4,
@@ -68,8 +65,7 @@ export const employees: Employee[] = [
         departmentId: 6,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2021-01-10',
-        location: '台北'
+        hireDate: '2021-01-10'
     },
     {
         id: 5,
@@ -81,8 +77,7 @@ export const employees: Employee[] = [
         departmentId: 6,
         employmentType: 'part-time',
         status: 'active',
-        hireDate: '2024-09-01',
-        location: '台北'
+        hireDate: '2024-09-01'
     },
 
     // 後端組 (departmentId: 7)
@@ -96,8 +91,7 @@ export const employees: Employee[] = [
         departmentId: 7,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2020-06-10',
-        location: '台北'
+        hireDate: '2020-06-10'
     },
     {
         id: 7,
@@ -109,8 +103,7 @@ export const employees: Employee[] = [
         departmentId: 7,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-02-14',
-        location: '新竹'
+        hireDate: '2023-02-14'
     },
     {
         id: 8,
@@ -122,8 +115,7 @@ export const employees: Employee[] = [
         departmentId: 7,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-11-05',
-        location: '台中'
+        hireDate: '2023-11-05'
     },
     {
         id: 9,
@@ -135,8 +127,7 @@ export const employees: Employee[] = [
         departmentId: 7,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2021-04-22',
-        location: '台北'
+        hireDate: '2021-04-22'
     },
     {
         id: 10,
@@ -148,8 +139,7 @@ export const employees: Employee[] = [
         departmentId: 7,
         employmentType: 'contract',
         status: 'active',
-        hireDate: '2024-03-01',
-        location: '遠端'
+        hireDate: '2024-03-01'
     },
 
     // DevOps (departmentId: 13)
@@ -163,8 +153,7 @@ export const employees: Employee[] = [
         departmentId: 13,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2022-08-15',
-        location: '新竹'
+        hireDate: '2022-08-15'
     },
     {
         id: 12,
@@ -176,8 +165,7 @@ export const employees: Employee[] = [
         departmentId: 13,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-05-30',
-        location: '台北'
+        hireDate: '2023-05-30'
     },
 
     // 資料工程 (departmentId: 14)
@@ -191,8 +179,7 @@ export const employees: Employee[] = [
         departmentId: 14,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2020-11-01',
-        location: '新竹'
+        hireDate: '2020-11-01'
     },
     {
         id: 14,
@@ -204,8 +191,7 @@ export const employees: Employee[] = [
         departmentId: 14,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-06-12',
-        location: '新竹'
+        hireDate: '2023-06-12'
     },
     {
         id: 15,
@@ -217,8 +203,7 @@ export const employees: Employee[] = [
         departmentId: 14,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2024-01-08',
-        location: '台北'
+        hireDate: '2024-01-08'
     },
 
     // 產品管理 (departmentId: 9)
@@ -232,8 +217,7 @@ export const employees: Employee[] = [
         departmentId: 9,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2020-09-20',
-        location: '台北'
+        hireDate: '2020-09-20'
     },
     {
         id: 17,
@@ -245,8 +229,7 @@ export const employees: Employee[] = [
         departmentId: 9,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-03-15',
-        location: '台中'
+        hireDate: '2023-03-15'
     },
     {
         id: 18,
@@ -258,8 +241,7 @@ export const employees: Employee[] = [
         departmentId: 9,
         employmentType: 'full-time',
         status: 'inactive',
-        hireDate: '2022-07-01',
-        location: '台北'
+        hireDate: '2022-07-01'
     },
 
     // 設計組 (departmentId: 10)
@@ -273,8 +255,7 @@ export const employees: Employee[] = [
         departmentId: 10,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-04-18',
-        location: '台北'
+        hireDate: '2023-04-18'
     },
     {
         id: 20,
@@ -286,8 +267,7 @@ export const employees: Employee[] = [
         departmentId: 10,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2021-08-25',
-        location: '台北'
+        hireDate: '2021-08-25'
     },
     {
         id: 21,
@@ -299,8 +279,7 @@ export const employees: Employee[] = [
         departmentId: 10,
         employmentType: 'contract',
         status: 'active',
-        hireDate: '2024-05-10',
-        location: '高雄'
+        hireDate: '2024-05-10'
     },
 
     // 企業客戶 (departmentId: 11)
@@ -314,8 +293,7 @@ export const employees: Employee[] = [
         departmentId: 11,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2020-02-01',
-        location: '台北'
+        hireDate: '2020-02-01'
     },
     {
         id: 23,
@@ -327,8 +305,7 @@ export const employees: Employee[] = [
         departmentId: 11,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2021-11-15',
-        location: '台中'
+        hireDate: '2021-11-15'
     },
     {
         id: 24,
@@ -340,8 +317,7 @@ export const employees: Employee[] = [
         departmentId: 11,
         employmentType: 'full-time',
         status: 'inactive',
-        hireDate: '2022-04-08',
-        location: '台中'
+        hireDate: '2022-04-08'
     },
 
     // 中小企業 (departmentId: 12)
@@ -355,8 +331,7 @@ export const employees: Employee[] = [
         departmentId: 12,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-09-20',
-        location: '高雄'
+        hireDate: '2023-09-20'
     },
     {
         id: 26,
@@ -368,8 +343,7 @@ export const employees: Employee[] = [
         departmentId: 12,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2024-02-14',
-        location: '高雄'
+        hireDate: '2024-02-14'
     },
 
     // 行銷部 (departmentId: 4)
@@ -383,8 +357,7 @@ export const employees: Employee[] = [
         departmentId: 4,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2020-05-12',
-        location: '台北'
+        hireDate: '2020-05-12'
     },
     {
         id: 28,
@@ -396,8 +369,7 @@ export const employees: Employee[] = [
         departmentId: 4,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2023-10-02',
-        location: '新竹'
+        hireDate: '2023-10-02'
     },
     {
         id: 29,
@@ -409,8 +381,7 @@ export const employees: Employee[] = [
         departmentId: 4,
         employmentType: 'contract',
         status: 'inactive',
-        hireDate: '2024-06-18',
-        location: '台中'
+        hireDate: '2024-06-18'
     },
 
     // 人資部 (departmentId: 5)
@@ -424,8 +395,7 @@ export const employees: Employee[] = [
         departmentId: 5,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2021-06-01',
-        location: '台北'
+        hireDate: '2021-06-01'
     },
     {
         id: 31,
@@ -437,7 +407,6 @@ export const employees: Employee[] = [
         departmentId: 5,
         employmentType: 'full-time',
         status: 'active',
-        hireDate: '2024-08-22',
-        location: '新竹'
+        hireDate: '2024-08-22'
     }
 ];

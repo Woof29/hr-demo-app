@@ -1,0 +1,1 @@
+- [User decomposes components proactively](user_component_decomposition.md) — splits forms/complex UI into client components without being asked

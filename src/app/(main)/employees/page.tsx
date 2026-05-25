@@ -6,8 +6,9 @@ import { getDescendantIds } from '@/lib/department-utils';
 import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '@/components/ui/table';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
+import Link from 'next/link';
 
-const covertDepartmentIdToName = (id: number) => {
+const convertDepartmentIdToName = (id: number) => {
     const department = departments.find((dept) => dept.id === id);
     return department ? department.name : '未知部門';
 };
@@ -17,8 +18,9 @@ export default function EmployeesPage(): React.ReactNode {
     const departmentId = searchParams.get('dept');
     const view = searchParams.get('view');
 
-    const [keyword, setKeyword] = useState('');
+    const [keyword, setKeyword] = useState<string>('');
 
+    // 先根據 departmentId 和 view 過濾一次
     const filtered = (() => {
         if (!departmentId && view !== 'inactive') {
             return employees.filter((employee) => employee.status === 'active');
@@ -29,6 +31,7 @@ export default function EmployeesPage(): React.ReactNode {
         return employees.filter((employee) => ids.includes(employee.departmentId));
     })();
 
+    // 再根據搜尋關鍵字過濾一次
     const displayed = filtered.filter((employee) => {
         if (!keyword) return true;
         const kw = keyword.toLowerCase();
@@ -67,9 +70,11 @@ export default function EmployeesPage(): React.ReactNode {
                         <TableRow key={employee.id}>
                             <TableCell>{employee.id}</TableCell>
                             <TableCell>
-                                {employee.nameZh} / {employee.nameEn}
+                                <Link href={`/employees/${employee.id}`} className="text-blue-600 hover:underline">
+                                    {employee.nameZh} / {employee.nameEn}
+                                </Link>
                             </TableCell>
-                            <TableCell>{covertDepartmentIdToName(employee.departmentId)}</TableCell>
+                            <TableCell>{convertDepartmentIdToName(employee.departmentId)}</TableCell>
                             <TableCell>{employee.title}</TableCell>
                             <TableCell>{employee.email}</TableCell>
                             <TableCell>{employee.phone}</TableCell>

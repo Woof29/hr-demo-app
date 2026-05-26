@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { SidebarProvider, SidebarInset, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
 import { buildTree } from '@/lib/department-utils';
@@ -20,7 +21,9 @@ export default function MainLayout({
                 <SidebarInset>
                     <header className="sticky top-0 bg-background flex h-14 items-center gap-2 border-b px-4 z-10">
                         <SidebarTrigger />
-                        <Breadcrumbs />
+                        <Suspense fallback={null}>
+                            <Breadcrumbs />
+                        </Suspense>
                         <ThemeToggle className="ml-auto" />
                     </header>
                     <div className="p-4">{children}</div>

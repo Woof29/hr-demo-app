@@ -1,15 +1,14 @@
 'use client';
-
 import { useSearchParams } from 'next/navigation';
 import { employees, departments } from '@/lib/mock-data';
 import { getDescendantIds } from '@/lib/department-utils';
 import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '@/components/ui/table';
 import { Input } from '@/components/ui/input';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Link from 'next/link';
 import { convertDepartmentIdToName } from '@/lib/utils';
 
-export default function EmployeesPage(): React.ReactNode {
+function EmployeesContent(): React.ReactNode {
     const searchParams = useSearchParams();
     const departmentId = searchParams.get('dept');
     const view = searchParams.get('view');
@@ -87,5 +86,13 @@ export default function EmployeesPage(): React.ReactNode {
                 </TableBody>
             </Table>
         </div>
+    );
+}
+
+export default function EmployeesPage(): React.ReactNode {
+    return (
+        <Suspense fallback={null}>
+            <EmployeesContent />
+        </Suspense>
     );
 }

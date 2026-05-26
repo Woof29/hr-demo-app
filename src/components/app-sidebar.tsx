@@ -21,7 +21,7 @@ type AppSidebarProps = {
 
 export function AppSidebar({ tree }: AppSidebarProps) {
     return (
-        <Sidebar collapsible="icon">
+        <Sidebar collapsible="offcanvas">
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupLabel>主選單</SidebarGroupLabel>

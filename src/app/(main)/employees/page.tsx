@@ -7,11 +7,7 @@ import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '@
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import Link from 'next/link';
-
-const convertDepartmentIdToName = (id: number) => {
-    const department = departments.find((dept) => dept.id === id);
-    return department ? department.name : '未知部門';
-};
+import { convertDepartmentIdToName } from '@/lib/utils';
 
 export default function EmployeesPage(): React.ReactNode {
     const searchParams = useSearchParams();
@@ -47,6 +43,8 @@ export default function EmployeesPage(): React.ReactNode {
         setKeyword(e.target.value); // 就這樣就好！
     };
 
+    const from = departmentId ? `dept-${departmentId}` : view === 'inactive' ? 'inactive' : 'all';
+
     return (
         <div className="flex flex-col min-h-screen">
             {/* 搜尋框 */}
@@ -70,11 +68,17 @@ export default function EmployeesPage(): React.ReactNode {
                         <TableRow key={employee.id}>
                             <TableCell>{employee.id}</TableCell>
                             <TableCell>
-                                <Link href={`/employees/${employee.id}`} className="text-blue-600 hover:underline">
+                                <Link
+                                    href={{
+                                        pathname: `/employees/${employee.id}`,
+                                        query: { from }
+                                    }}
+                                    className="text-blue-600 hover:underline"
+                                >
                                     {employee.nameZh} / {employee.nameEn}
                                 </Link>
                             </TableCell>
-                            <TableCell>{convertDepartmentIdToName(employee.departmentId)}</TableCell>
+                            <TableCell>{convertDepartmentIdToName(employee.departmentId, departments)}</TableCell>
                             <TableCell>{employee.title}</TableCell>
                             <TableCell>{employee.email}</TableCell>
                             <TableCell>{employee.phone}</TableCell>

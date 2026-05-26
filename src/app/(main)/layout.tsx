@@ -3,6 +3,8 @@ import { AppSidebar } from '@/components/app-sidebar';
 import { buildTree } from '@/lib/department-utils';
 import { departments } from '@/lib/mock-data';
 import { Toaster } from '@/components/ui/sonner';
+import Breadcrumbs from '@/components/breadcrumbs';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function MainLayout({
     children
@@ -18,7 +20,8 @@ export default function MainLayout({
                 <SidebarInset>
                     <header className="sticky top-0 bg-background flex h-14 items-center gap-2 border-b px-4 z-10">
                         <SidebarTrigger />
-                        {/* 之後可以放麵包屑、頁面標題等 */}
+                        <Breadcrumbs />
+                        <ThemeToggle className="ml-auto" />
                     </header>
                     <div className="p-4">{children}</div>
                 </SidebarInset>

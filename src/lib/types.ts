@@ -68,3 +68,8 @@ export type Employee = {
     personalInfo?: PersonalInfo;
     resumeInfo?: ResumeInfo;
 };
+
+export type BreadcrumbItemData = {
+    label: string;
+    href?: string;
+};

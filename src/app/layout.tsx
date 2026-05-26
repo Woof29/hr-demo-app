@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Noto_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const playfairDisplayHeading = Playfair_Display({ subsets: ['latin'], variable: '--font-heading' });
 
@@ -42,7 +43,14 @@ export default function RootLayout({
             suppressHydrationWarning
         >
             <body className="min-h-full flex flex-col" suppressHydrationWarning>
-                {children}
+                <ThemeProvider
+                    attribute="class" // 用 class="dark" 模式(對應 Tailwind dark: 變體)
+                    defaultTheme="system" // 預設跟系統設定
+                    enableSystem // 允許 'system' 選項
+                    disableTransitionOnChange // 切換時禁用過場動畫,避免一堆元素 transition 同時觸發很卡
+                >
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

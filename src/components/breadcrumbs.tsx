@@ -38,9 +38,10 @@ export default function Breadcrumbs() {
     const searchParams = useSearchParams();
 
     const items: BreadcrumbItemData[] = [];
-    const isDetailPage = pathname.startsWith('/employees/') && pathname.split('/').length === 3;
+    const employeeMatch = pathname.match(/\/employees\/(\d+)\/?$/);
+    const isDetailPage = !!employeeMatch;
     if (isDetailPage) {
-        const employeeId = Number(pathname.split('/')[2]);
+        const employeeId = Number(employeeMatch![1]);
         const employee = employees.find((emp) => emp.id === employeeId);
         if (employee) {
             const source = resolveFrom(searchParams.get('from'));

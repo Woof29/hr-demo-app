@@ -18,13 +18,13 @@ const resolveFrom = (from: string | null) => {
         const deptId = Number(from.split('-')[1]);
         return {
             label: convertDepartmentIdToName(deptId, departments) ?? '未知部門',
-            href: `/employees?dept=${deptId}`
+            href: `/employees/?dept=${deptId}`
         };
     }
     if (from === 'inactive') {
         return {
             label: '停職成員',
-            href: '/employees?view=inactive'
+            href: '/employees/?view=inactive'
         };
     }
     return {

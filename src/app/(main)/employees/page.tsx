@@ -4,7 +4,7 @@ import { employees, departments } from '@/lib/mock-data';
 import { getDescendantIds } from '@/lib/department-utils';
 import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '@/components/ui/table';
 import { Input } from '@/components/ui/input';
-import { Suspense, useState } from 'react';
+import { Suspense, useState, useMemo } from 'react';
 import Link from 'next/link';
 import { convertDepartmentIdToName } from '@/lib/utils';
 
@@ -16,7 +16,7 @@ function EmployeesContent(): React.ReactNode {
     const [keyword, setKeyword] = useState<string>('');
 
     // 先根據 departmentId 和 view 過濾一次
-    const filtered = (() => {
+    const filtered = useMemo(() => {
         if (!departmentId && view !== 'inactive') {
             return employees.filter((employee) => employee.status === 'active');
         } else if (view === 'inactive') {
@@ -24,7 +24,7 @@ function EmployeesContent(): React.ReactNode {
         }
         const ids = getDescendantIds(departments, Number(departmentId));
         return employees.filter((employee) => ids.includes(employee.departmentId));
-    })();
+    }, [departmentId, view]);
 
     // 再根據搜尋關鍵字過濾一次
     const displayed = filtered.filter((employee) => {
